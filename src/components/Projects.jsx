@@ -10,6 +10,7 @@ const Projects = () => {
         "E-commerce clothing website with user registration, product browsing, shopping cart, wishlist and secure checkout.",
       tech: ["Angular", "Node.js", "Express.js", "PostgreSQL"],
       gradient: "linear-gradient(135deg, #a855f7, #ec4899)",
+      githubLink: "https://github.com/sakshi123kakde/ECommerce",
     },
     {
       title: "Community Homestay",
@@ -18,6 +19,7 @@ const Projects = () => {
         "Platform connecting travelers with local hosts for authentic experiences in Chh Sambhaji Nagar.",
       tech: ["Android Studio", "Firebase"],
       gradient: "linear-gradient(135deg, #3b82f6, #06b6d4)",
+      githubLink: "https://github.com/sakshi123kakde/Homestay",
     },
     {
       title: "Nanonest",
@@ -26,6 +28,7 @@ const Projects = () => {
         "Investor and Entrepreneur Communication Platform enabling seamless collaboration and project investments.",
       tech: ["React.js", "Firebase"],
       gradient: "linear-gradient(135deg, #10b981, #14b8a6)",
+      githubLink: "https://github.com/sakshi123kakde/Nanonest",
     },
     {
       title: "TodoList App",
@@ -34,6 +37,7 @@ const Projects = () => {
         "Efficient task management app with categorization, prioritization, due dates, and completion tracking.",
       tech: ["React", "Vite", "Node.js", "Express.js", "Mongoose"],
       gradient: "linear-gradient(135deg, #f97316, #ef4444)",
+      githubLink: "https://github.com/sakshi123kakde/Todo",
     },
   ];
 
@@ -64,15 +68,15 @@ const Projects = () => {
                   transition: "all 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.borderColor = "#a855f7";
-                  e.target.style.transform = "scale(1.02)";
-                  e.target.style.boxShadow =
+                  e.currentTarget.style.borderColor = "#a855f7";
+                  e.currentTarget.style.transform = "scale(1.02)";
+                  e.currentTarget.style.boxShadow =
                     "0 20px 40px rgba(168, 85, 247, 0.1)";
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.borderColor = "#374151";
-                  e.target.style.transform = "scale(1)";
-                  e.target.style.boxShadow = "none";
+                  e.currentTarget.style.borderColor = "#374151";
+                  e.currentTarget.style.transform = "scale(1)";
+                  e.currentTarget.style.boxShadow = "none";
                 }}
               >
                 <div
@@ -83,7 +87,14 @@ const Projects = () => {
                     <h3 className="fs-5 fw-semibold text-white mb-0">
                       {project.title}
                     </h3>
-                    <ExternalLink size={20} style={{ color: "#9ca3af" }} />
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#9ca3af" }}
+                    >
+                      <ExternalLink size={20} />
+                    </a>
                   </div>
 
                   <p className="small mb-3" style={{ color: "#9ca3af" }}>
@@ -107,10 +118,10 @@ const Projects = () => {
                           transition: "all 0.3s ease",
                         }}
                         onMouseEnter={(e) => {
-                          e.target.style.backgroundColor = "#a855f7";
+                          e.currentTarget.style.backgroundColor = "#a855f7";
                         }}
                         onMouseLeave={(e) => {
-                          e.target.style.backgroundColor = "#374151";
+                          e.currentTarget.style.backgroundColor = "#374151";
                         }}
                       >
                         {tech}
